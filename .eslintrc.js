@@ -17,5 +17,8 @@ module.exports = {
         trailingUnderscore: 'allow',
       },
     ],
-  }
+  },
+  parserOptions:  {
+    createDefaultProgram: true,
+},
 };

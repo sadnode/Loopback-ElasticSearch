@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import {inject} from '@loopback/core';
 import {repository} from '@loopback/repository';
 import {
@@ -49,12 +50,12 @@ export class PingController {
 
   @get('/categories')
   async index() {
-    await this.categoryRepository.create({
-      id: '1',
-      name: 'minha primeira categoria',
-      created_at: new Date(),
-      updated_at: new Date(),
-    });
+    // await this.categoryRepository.create({
+    //   id: '1',
+    //   name: 'minha primeira categoria',
+    //   created_at: new Date(),
+    //   updated_at: new Date(),
+    // });
     return this.categoryRepository.find();
   }
 }
