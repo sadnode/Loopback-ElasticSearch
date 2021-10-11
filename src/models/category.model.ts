@@ -18,16 +18,22 @@ export class Category extends Entity {
   name: string;
 
   @property({
-    type: 'string',
+    type: 'boolean',
+    required: false,
   })
-  description?: string;
+  is_active?: boolean = true;
 
+  @property({
+    type: 'date',
+    required: true,
+  })
+  created_at: Date;
 
-  // Define well-known properties here
-
-  // Indexer property to allow additional data
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [prop: string]: any;
+  @property({
+    type: 'date',
+    required: true,
+  })
+  updated_at: Date;
 
   constructor(data?: Partial<Category>) {
     super(data);
